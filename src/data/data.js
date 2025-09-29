@@ -1,35 +1,27 @@
-import WorkIm from '../assets/projects/workImg.jpeg'
-import RealEst from '../assets/projects/realestate.jpg'
+import Watch from '../assets/projects/luxurywatches.png'
+import Todo from '../assets/projects/Todo.png'
+import Wedding from '../assets/projects/Wedding.png'
 
 export const data=[
     {
         id:1,
-        name:"React JS Application",
-        image:WorkIm,
-        github:"",
-        live:"",
+        name:"Ecommerce Website",
+        image:Watch,
+        github:"https://github.com/TsuTsu03/website-ecommerce",
+        live:"https://luxurywatches-tau.vercel.app/",
     },
     {
         id:2,
-        name:"React JS Application",
-        image:RealEst,
-        github:"",
-        live:"",
+        name:"Todo Application",
+        image:Todo,
+        github:"https://github.com/TsuTsu03/todo-app",
+        live:"https://todothese.vercel.app/",
     },
     {
         id:3,
-        name:"React JS Application",
-        image:WorkIm,
-        github:"",
-        live:"",
-    },
-    {
-        id:4,
-        name:"React JS Application",
-        image:RealEst,
-        github:"",
-        live:"",
-    },
-
-
+        name:"Wedding Invitation",
+        image:Wedding,
+        github:"https://github.com/TsuTsu03/JeizKen",
+        live:"https://jeizwantsthedy.vercel.app/",
+    }
 ]

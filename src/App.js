@@ -11,17 +11,16 @@ import MusicPlayer from "./components/MusicPlayer";
 
 function App() {
   return (
-    <div>
-            <StarBackground />
+    <div className="w-full bg-primary">
+      <StarBackground />
       <Navbar />
+      <div className="flex flex-col space-y-12 px-4 sm:px-24">
       <Home />
       <About />
-      <div className="h-64 bg-primary"></div>
       <Skills />
-      <div className="h-64 bg-primary"></div>
       <Work />
-      <div className="h-64 bg-primary"></div>
       <Contact />
+      </div>
       <MusicPlayer />
     </div>
   );

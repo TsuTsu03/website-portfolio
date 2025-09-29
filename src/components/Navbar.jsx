@@ -52,7 +52,7 @@ return (
     <div className='hidden'> <RxHamburgerMenu /> </div>
 
     {/* Mobile Menu */}
-    <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-primary flex flex-col justify-center items-center'}>
+    <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full  bg-primary flex flex-col justify-center items-center'}>
       <li className='py-6 text-4xl'>Home</li>
       <li className='py-6 text-4xl'>About</li>
       <li className='py-6 text-4xl'>Skills</li>
@@ -60,41 +60,41 @@ return (
       <li className='py-6 text-4xl'>Contact</li>
     </ul>
 
-    {/* Social Icons */}
-    <div className='your-component border-light fixed flex flex-col top-[35%] left-0 border-[3px] border-l-0 rounded-r-3xl border-text_light pr-2 py-6'>
-      <ul className='text-[40px] flex flex-col gap-4 text-text_heading'>
-        <li className='hover:scale-150 duration-500'>
-          <a href="https://www.linkedin.com/in/den-jansen-flores-20122b239/">
-            <RxLinkedinLogo /> 
-          </a>
-        </li>
-        <li className='hover:scale-150 duration-500'>
-          <a href="https://github.com/TsuTsu03">
-            <RxGithubLogo /> 
-          </a>
-        </li>
-        <li className='hover:scale-150 duration-500'>
-          <a href="https://www.facebook.com/djflores03?mibextid=sCpJLy">
-            <BsFacebook /> 
-          </a>
-        </li>
-        <li className='hover:scale-150 duration-500'>
-          <a href="">
-            <BsInstagram /> 
-          </a>
-        </li>
-        <li className='hover:scale-150 duration-500'>
-          <a href="">
-            <HiOutlineMail /> 
-          </a>
-        </li>
-        <li className='hover:scale-150 duration-500'>
-          <a href="">
-            <BsFillPersonLinesFill /> 
-          </a>
-        </li>
-      </ul>
-    </div>
+{/* Social Icons */}
+<div className='your-component fixed flex flex-col top-[35%] left-0 pr-2 py-6'>
+  <ul className='text-[28px] sm:text-[40px] flex flex-col gap-4 text-text_heading'>
+    <li className='hover:scale-150 duration-500'>
+      <a href="https://www.linkedin.com/in/den-jansen-flores-20122b239/">
+        <RxLinkedinLogo /> 
+      </a>
+    </li>
+    <li className='hover:scale-150 duration-500'>
+      <a href="https://github.com/TsuTsu03">
+        <RxGithubLogo /> 
+      </a>
+    </li>
+    <li className='hover:scale-150 duration-500'>
+      <a href="https://www.facebook.com/djflores03?mibextid=sCpJLy">
+        <BsFacebook /> 
+      </a>
+    </li>
+    <li className='hover:scale-150 duration-500'>
+      <a href="">
+        <BsInstagram /> 
+      </a>
+    </li>
+    <li className='hover:scale-150 duration-500'>
+      <a href="">
+        <HiOutlineMail /> 
+      </a>
+    </li>
+    <li className='hover:scale-150 duration-500'>
+      <a href="">
+        <BsFillPersonLinesFill /> 
+      </a>
+    </li>
+  </ul>
+</div>
   </div>
 );
 

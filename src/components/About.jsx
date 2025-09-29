@@ -10,8 +10,7 @@ const About = () => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
   
-      // You can adjust the threshold value to control when the fade-in/fade-out occurs
-      const threshold = 200;
+      const threshold = 50;
   
       if (scrollTop > threshold && !isVisible) {
         setIsVisible(true);
@@ -30,32 +29,50 @@ const About = () => {
   }, [isVisible]);
 
 
-  return (
-    <div name='about' className='z-10 w-full h-screen bg-primary text-text_light'>
-      <div className={`fade-container ${isVisible ? 'opacity-100' : 'opacity-0'} z-10 flex justify-center items-center w-full h-full gap-4`}>
-        <div className='w-1/4 mt-40 flex justify-end z-10'>
-            <img className='z-10 rounded-2xl opacity-70' alt='MyPicture' src={MyPicture} />
+return (
+  <div
+    name="about"
+    className="z-10 w-full border border-zinc-400 rounded-2xl mt-24 shadow-md shadow-zinc-400 text-text_light flex justify-center"
+  >
+    <div className="w-full max-w-[1000px] px-6 sm:px-12 py-8">
+      {/* Title */}
+      <div className="w-full text-center sm:text-left pb-4">
+        <p className="text-4xl font-bold inline border-b-4 border-[#2e8a99]">
+          About Me
+        </p>
+      </div>
+      <div
+        className={`fade-container ${
+          isVisible ? "opacity-100" : "opacity-0"
+        } z-10 flex flex-col sm:flex-row items-center sm:items-start justify-center gap-8`}
+      >
+        {/* Image */}
+        <div className="w-full sm:w-1/3 flex justify-center sm:justify-end z-10">
+          <img
+            className="rounded-2xl opacity-70 max-w-[250px] sm:max-w-[300px] my-4"
+            alt="MyPicture"
+            src={MyPicture}
+          />
         </div>
-        <div className='w-1/4 mt-40 gap-8'>
-          <div className='sm:text-left pb-8'>
-            <p className='text-4xl font-bold inline border-b-4 border-[#2e8a99]'>
-              About Me
-            </p>
-          </div>
-          <div className='sm:text-left text-5xl font-bold mb-4 z-10'>
+
+        <div className="w-full sm:mt-8 sm:w-2/3 flex flex-col items-center justify-center sm:items-start">
+          <div className="text-lg sm:text-3xl font-bold mb-2 z-10 text-center sm:text-left">
             <p>Hi. I'm Jansen, nice to meet you. Please take a look around.</p>
           </div>
-          <div className='text-2xl z-10'>
+          <div className="text-base sm:text-xl z-10 text-center sm:text-left leading-relaxed">
             <p>
-            I love building awesome software that makes life better. From helping individuals and small businesses to big corporations, I'm here to turn your ideas into reality. Imagine having your personal software expert right at your fingertips – what would you create?
+              I love building awesome software that makes life better. From
+              helping individuals and small businesses to big corporations, I'm
+              here to turn your ideas into reality. Imagine having your personal
+              software expert right at your fingertips – what would you create?
             </p>
           </div>
         </div>
       </div>
     </div>
-  );
-  
-  
-};
+  </div>
+);
+}
+
 
 export default About;

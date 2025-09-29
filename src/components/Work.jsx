@@ -11,7 +11,7 @@ const Work = () => {
       const scrollTop = window.scrollY;
   
       // You can adjust the threshold value to control when the fade-in/fade-out occurs
-      const threshold = 2800;
+      const threshold = 150;
   
       if (scrollTop > threshold && !isVisible) {
         setIsVisible(true);
@@ -30,13 +30,13 @@ const Work = () => {
   }, [isVisible]);
 
   return (
-    <div name='work' className='w-full md:h-screen text-text_heading bg-primary'>
-      <div className={`z-10 fade-container ${isVisible ? 'opacity-100' : 'opacity-0'} max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-screen`}>
+    <div name='work' className='w-full border border-zinc-400 rounded-2xl mt-24 shadow-md shadow-zinc-400 md: text-text_heading'>
+      <div className={`z-10 fade-container ${isVisible ? 'opacity-100' : 'opacity-0'} max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full `}>
         <div className=''>
           <p className='text-4xl font-bold inline border-b-4 text-text_heading border-[#2e8a99]'>
             Work
           </p>
-          <p className='py-6'>// Check out some of my recent work</p>
+          <p className='py-6'>Take a look at the projects I’ve built — turning ideas into working solutions.</p>
         </div>
 
         {/* container for projects */}

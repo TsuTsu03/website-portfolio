@@ -21,7 +21,7 @@ const Skills = () => {
           const scrollTop = window.scrollY;
       
           // You can adjust the threshold value to control when the fade-in/fade-out occurs
-          const threshold = 1500;
+          const threshold = 150;
       
           if (scrollTop > threshold && !isVisible) {
             setIsVisible(true);
@@ -40,9 +40,9 @@ const Skills = () => {
       }, [isVisible]);
 
   return (
-    <div name='skills' className={`w-full h-screen bg-primary text-text_heading`}>
+    <div name='skills' className={`w-full border border-zinc-400 rounded-2xl mt-24 shadow-md shadow-zinc-400 text-text_heading`}>
       {/* Container */}
-      <div className={`fade-container ${isVisible ? 'opacity-100' : 'opacity-0'} max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full`}>
+      <div className={`fade-container ${isVisible ? 'opacity-100' : 'opacity-0'} max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full `}>
           <div>
               <p className='text-4xl font-bold inline border-b-4 border-[#2e8a99] '>Skills</p>
               <p className='py-4 font-bold'>ITO YUNG MGA KAYA KONG GAWIN PUTANGINA DI KO NA ALAM ILALAGAY KO</p>

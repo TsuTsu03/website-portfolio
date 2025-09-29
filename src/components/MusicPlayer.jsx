@@ -41,19 +41,21 @@ const MusicPlayer = () => {
 
   return (
     <div>
-      {showModal && (
-        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-75">
-          <div className="bg-primary p-8 rounded-3xl text-center border-4 border-text_light">
-            <h2 className="text-4xl my-4 text-text_light font-bold mb-4 ">Do you want to chill while browsing my website?</h2>
-            <button
-              onClick={playAudio}
-              className="bg-blue-500 mt-4 text-text_light px-4 py-2 rounded-md font-bold hover:bg-blue-700"
-            >
-              Okay
-            </button>
-          </div>
-        </div>
-      )}
+{showModal && (
+  <div className="fixed top-0 left-0 w-full h-screen flex items-center justify-center bg-black/50 backdrop-blur-sm z-50">
+    <div className="bg-primary p-8 rounded-3xl text-center border-4 border-text_light">
+      <h2 className="text-4xl my-4 text-text_light font-bold mb-4">
+        Welcome to my Website portfolio! Happy Browsing! 😀
+      </h2>
+      <button
+        onClick={playAudio}
+        className="bg-blue-500 mt-4 text-text_light px-4 py-2 rounded-md font-bold hover:bg-blue-700"
+      >
+        Okay
+      </button>
+    </div>
+  </div>
+)}
 
       <div className="fixed bottom-8 right-8 flex items-center space-x-4">
         <audio id="background-music" loop className="hidden">
