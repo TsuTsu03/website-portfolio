@@ -64,7 +64,7 @@ return (
 <div className='your-component fixed flex flex-col top-[35%] left-0 pr-2 py-6'>
   <ul className='text-[28px] sm:text-[40px] flex flex-col gap-4 text-text_heading'>
     <li className='hover:scale-150 duration-500'>
-      <a href="https://www.linkedin.com/in/den-jansen-flores-20122b239/">
+      <a href="https://www.linkedin.com/in/den-jansen-flores-79b8ba387/">
         <RxLinkedinLogo /> 
       </a>
     </li>
