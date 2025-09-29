@@ -45,7 +45,7 @@ const Skills = () => {
       <div className={`fade-container ${isVisible ? 'opacity-100' : 'opacity-0'} max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full `}>
           <div>
               <p className='text-4xl font-bold inline border-b-4 border-[#2e8a99] '>Skills</p>
-              <p className='py-4 font-bold'>ITO YUNG MGA KAYA KONG GAWIN PUTANGINA DI KO NA ALAM ILALAGAY KO</p>
+              <p className='py-4 font-bold'>These are the skills and languages I have experience with.</p>
           </div>
           <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
               <div className='shadow-md grid-item shadow-[#1f6e8c] bg-[#164863] pt-4 hover:scale-110 duration-500'>
