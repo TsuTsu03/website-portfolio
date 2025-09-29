@@ -52,7 +52,7 @@ const Home = () => {
             Den Jansen Flores
           </h1>
           <h2 className='text-2xl sm:text-7xl font-bold text-[#ffffff]'>
-            I'm a Full Stack Developer.
+            I'm a Front-End Developer.
           </h2>
           </div>
           <h3 className='text-text_light py-2 max-w-[700px] text-center sm:text-2xl'>
