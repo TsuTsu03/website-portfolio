@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
-import Resume from '../assets/Resume-Den-Jansen-Flores.pdf';
+import ResumePDF from "../assets/resume.pdf";
 
 
 const Home = () => {
@@ -31,14 +31,14 @@ const Home = () => {
     };
   }, [isVisible]);
 
-  const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = Resume;
-    link.download = 'Resume_Den_Jansen_Flores.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+const handleDownload = () => {
+  const link = document.createElement("a");
+  link.href = ResumePDF; // React will handle the file path
+  link.download = "Resume_Den_Jansen_Flores.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
   return (
     <div name='home' className="w-full p-4 border border-zinc-400 rounded-2xl mt-24 shadow-md shadow-zinc-400">
