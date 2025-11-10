@@ -2,6 +2,7 @@ import Watch from '../assets/projects/luxurywatches.png'
 import Todo from '../assets/projects/Todo.png'
 import Wedding from '../assets/projects/Wedding.png'
 import Employee from '../assets/projects/Employee.png'
+import Saas from '../assets/projects/saas.png'
 
 export const data=[
     {
@@ -26,10 +27,17 @@ export const data=[
         live:"https://jeizwantsthedy.vercel.app/",
     },
         {
-        id:3,
+        id:4,
         name:"MULTI-TENANT TICKETING & EMPLOYEE TRACKING SAAS",
         image:Employee,
         github:"https://github.com/TsuTsu03/employee-ticketing-system",
         live:"https://employee-system-sooty.vercel.app/auth/login",
+    },
+{
+        id:5,
+        name:"SaaS Data Analysis Platform",
+        image:Saas,
+        github:"https://github.com/TsuTsu03/saas-data-analysis-platform",
+        live:"https://employee-system-nine-rosy.vercel.app//",
     },
 ]
