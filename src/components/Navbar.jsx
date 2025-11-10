@@ -8,7 +8,7 @@ import React, { useState } from "react";
 
 const Navbar = () => {
   const [nav, setNavOpen] = useState(false);
-  const handleToggle = () => setNavOpen((v) => !v);
+  const handleToggle = () => setNavOpen(v => !v);
   const handleClose = () => setNavOpen(false);
 
   return (
@@ -22,39 +22,25 @@ const Navbar = () => {
         aria-controls="mobile-menu"
         className="z-50"
       >
-        {!nav ? (
-          <RxHamburgerMenu className="text-[40px]" />
-        ) : (
-          <TiTimes className="text-[40px]" />
-        )}
+        {!nav ? <RxHamburgerMenu className="text-[40px]" /> : <TiTimes className="text-[40px]" />}
       </button>
 
       {/* Desktop nav */}
       <ul className="hidden md:flex gap-4 z-50">
         <li className="p-4 rounded hover:bg-[#2e8a99] duration-500">
-          <Link to="home" smooth duration={500}>
-            Home
-          </Link>
+          <Link to="home" smooth duration={500}>Home</Link>
         </li>
         <li className="p-4 rounded hover:bg-[#2e8a99] duration-500">
-          <Link to="about" smooth duration={500}>
-            About
-          </Link>
+          <Link to="about" smooth duration={500}>About</Link>
         </li>
         <li className="p-4 rounded hover:bg-[#2e8a99] duration-500">
-          <Link to="skills" smooth duration={500}>
-            Skills
-          </Link>
+          <Link to="skills" smooth duration={500}>Skills</Link>
         </li>
         <li className="p-4 rounded hover:bg-[#2e8a99] duration-500">
-          <Link to="work" smooth duration={500}>
-            Work
-          </Link>
+          <Link to="work" smooth duration={500}>Work</Link>
         </li>
         <li className="p-4 rounded hover:bg-[#2e8a99] duration-500">
-          <Link to="contact" smooth duration={500}>
-            Contact
-          </Link>
+          <Link to="contact" smooth duration={500}>Contact</Link>
         </li>
       </ul>
 
@@ -67,31 +53,19 @@ const Navbar = () => {
             : "absolute top-0 left-0 w-full bg-primary flex flex-col justify-center items-center pt-24 pb-10"
         }
       >
-        <li className="py-6 text-4xl">
-          <Link to="home" smooth duration={500} onClick={handleClose}>
-            Home
-          </Link>
-        </li>
-        <li className="py-6 text-4xl">
-          <Link to="about" smooth duration={500} onClick={handleClose}>
-            About
-          </Link>
-        </li>
-        <li className="py-6 text-4xl">
-          <Link to="skills" smooth duration={500} onClick={handleClose}>
-            Skills
-          </Link>
-        </li>
-        <li className="py-6 text-4xl">
-          <Link to="work" smooth duration={500} onClick={handleClose}>
-            Work
-          </Link>
-        </li>
-        <li className="py-6 text-4xl">
-          <Link to="contact" smooth duration={500} onClick={handleClose}>
-            Contact
-          </Link>
-        </li>
+        {[
+          { to: "home", label: "Home" },
+          { to: "about", label: "About" },
+          { to: "skills", label: "Skills" },
+          { to: "work", label: "Work" },
+          { to: "contact", label: "Contact" },
+        ].map(item => (
+          <li key={item.to} className="py-6 text-4xl">
+            <Link to={item.to} smooth duration={500} onClick={handleClose}>
+              {item.label}
+            </Link>
+          </li>
+        ))}
       </ul>
 
       {/* Social Icons */}
@@ -128,6 +102,7 @@ const Navbar = () => {
             </a>
           </li>
           <li className="hover:scale-150 duration-500">
+            {/* Use a real Instagram URL (update to your handle if you like) */}
             <a
               href="https://www.instagram.com/"
               target="_blank"
@@ -144,13 +119,14 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="hover:scale-150 duration-500">
-            {/* Link to About (or change to your resume file path) */}
-            <a href="#about" aria-label="About / Resume">
+            {/* Link to About or to your PDF resume */}
+            <Link to="about" smooth duration={500} aria-label="About / Resume">
               <BsFillPersonLinesFill />
-            </a>
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume">
-                <BsFillPersonLinesFill />
-              </a>
+            </Link>
+            {/* Or replace with a real file:
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume">
+              <BsFillPersonLinesFill />
+            </a> */}
           </li>
         </ul>
       </div>
