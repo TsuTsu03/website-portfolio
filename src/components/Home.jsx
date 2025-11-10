@@ -41,7 +41,7 @@ const handleDownload = () => {
 };
 
   return (
-    <div name='home' className="w-full p-4 border border-zinc-400 rounded-2xl mt-24 shadow-md shadow-zinc-400">
+    <div id='home' className="w-full p-4 border border-zinc-400 rounded-2xl mt-24 shadow-md shadow-zinc-400">
 
       {/* Container */}
       <div className={`fade-container ${isVisible ? 'opacity-0' : 'opacity-100'} w-full px-4 mx-auto justify-center flex gap-4 `}>

@@ -40,7 +40,7 @@ const Skills = () => {
       }, [isVisible]);
 
   return (
-    <div name='skills' className={`w-full border border-zinc-400 rounded-2xl mt-24 shadow-md shadow-zinc-400 text-text_heading`}>
+    <div id='skills' className={`w-full border border-zinc-400 rounded-2xl mt-24 shadow-md shadow-zinc-400 text-text_heading`}>
       {/* Container */}
       <div className={`fade-container ${isVisible ? 'opacity-100' : 'opacity-0'} max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full `}>
           <div>
